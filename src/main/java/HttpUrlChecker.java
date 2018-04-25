@@ -25,5 +25,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HttpUrlChecker {
+    public static Matcher getMatcher(String text){
+        
+        Pattern p;
+        p = Pattern.compile
+        ("^(https?:\\/\\/)(w{3}\\.)?\\w\\w*(-\\w*\\w)?(\\.\\w*)*?\\.(com|at)$");
+        Matcher m = p.matcher(text); 
 
+        return m;
+    }
 }
